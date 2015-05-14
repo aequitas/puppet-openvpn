@@ -15,6 +15,7 @@ define openvpn::client (
   $cipher         = 'AES-192-CBC',
   $openvpn_group  = $openvpn::params::openvpn_group,
   $openvpn_user   = $openvpn::params::openvpn_user,
+  $compression    = true,
   $tls_auth_key   = undef,
   $custom_options = [],
 ) {

@@ -20,7 +20,9 @@ group <%= @openvpn_group %>
 <% end -%>
 ns-cert-type <%= @ns_cert_type %>
 cipher <%= @cipher %>
+<%if @compression -%>
 comp-lzo
+<% end -%>
 verb <%= @verb %>
 # custom options
 <% @custom_options.each do |custom_option| -%>
