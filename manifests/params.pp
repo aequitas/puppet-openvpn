@@ -19,6 +19,13 @@ class openvpn::params {
       $openvpn_user   = '_openvpn'
       $openvpn_group  = '_openvpn'
     }
+    'Debian': {
+      $openvpn_dir    = '/etc/openvpn'
+      $package_name   = 'openvpn'
+      $manage_service = true
+      $openvpn_user   = 'nobody'
+      $openvpn_group  = 'nogroup'
+    }
     default: {
       $openvpn_dir    = '/etc/openvpn'
       $package_name   = 'openvpn'
